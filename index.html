@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>YouTube link 2 timecode</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div>
+            <h1>Ytlink2timecode</h1>
+            <p>Convert string with <code>Timecode https://youtu.be/u7R_ckIXpg8?t=26</code> to <code>00:26 Timecode</code></p> 
+        </div>
+
+        <form oninput="link2timecode()" onreset="resetForm()" id="form">
+            <div class="input">
+                <h3>Input</h3>
+                <textarea name="text" id="text" cols="30" rows="10" placeholder="Insert text here…"></textarea>
+                <button type="reset" id="reset" title="Clear"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+            </div>
+            <div class="output">
+                <h3>Output</h3>
+                <pre id="output"></pre>
+                <button type="button" id="copy" title="Copy to clipboard" onclick="copy2clip()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+            </div>
+        </form>
+
+        <script src="main.js"></script>
+    </body>
+</html>
